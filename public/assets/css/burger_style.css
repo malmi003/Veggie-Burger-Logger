@@ -65,3 +65,11 @@ input[type=submit] {
     cursor: pointer;
     font-size: .8rem;
 }
+input[type=submit]:hover {
+    display: block;
+    width: 300px;
+    background-color: rgb(218, 49, 20);
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 51, 15);
+    border-style: inset;
+}
