@@ -1,11 +1,23 @@
 {{!-- * Setup the `index.handlebars` to have the template that Handlebars can render onto. * Create a button in `index.handlebars`
 that will submit the user input into the database. --}}
+<header>
+    <h1>EATA-DA-VEGGIE-BURGER!</h1>
+    <img src="assets/img/burger.png" alt="burger">
+</header>
 
 <article>
+    <section>
+        <ul id="not-devoured">
+            {{#each burgers}} {{#unless devoured}} {{> burgers/burger-block devoured=false}} {{/unless}} {{/each}}
+        </ul>
+        <ul id="devoured">
+            {{#each burgers}} {{#if devoured}} {{> burgers/burger-block devoured=true}} {{/if}} {{/each}}
+        </ul>
+    </section>
     <form id="main-form">
         <fieldset>
             <legend>Explore the world of meatless burgers by entering a burger name below and clicking "Submit".</legend>
-            <textarea name="burger" id="burger-input" rows="4" cols="40"></textarea>
+            <textarea type="text" name="burger" id="burger-input" rows="4" cols="40"></textarea>
             <input type="submit" value="Submit" id="submit-btn">
         </fieldset>
     </form>

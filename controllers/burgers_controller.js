@@ -1,34 +1,33 @@
 let express = require("express");
-let burgers = require("../models/burger");
+let burger = require("../models/burger");
 
 let router = express.Router();
 
-//routes I need
-
-// get route to render the page from handlebars???
+// get route to render the page from handlebars
 router.get("/", function (req, res) {
-    burgers.selectAll(function (data) {
-        let hbsObject = {
+    burger.selectAll(function (data) {
+       let hbsObject = {
             burgers: data
         }
+        console.log(hbsObject);
+        res.render("index", hbsObject);
     });
-    res.render("index", hbsObject)
 });
-// post route to add new items to DB and then return a response that I can then post to the page
-router.post("/api/burgers", function (req, res) {
-    newBurgerName = req.body.burger_name;
-    burgers.insertOne("burger_name", newBurgerName, function (res) {
-        cb(res);
+// post route to add new items to DB and then return a response that I can then post to the page?
+router.post("/api/burgers/", function (req, res) {
+    console.log(req.body.burger_name);
+    burger.insertOne(["burger_name"], [req.body.burger_name], function(result) {
+        res.json({ id: result.insertId })
     });
 });
 
 // put route to update items in db and send new list of all items to render on page
-router.put("/api/burger/:id", function (req, res) {
+router.put("/api/burgers/:id", function (req, res) {
     let condition = "id = " + req.params.id;
 
     console.log("condition", condition);
 
-    burgers.updateOne({
+    burger.updateOne({
         devoured: req.body.devoured
     }, condition, function (result) {
         if (result.changedRows == 0) {
