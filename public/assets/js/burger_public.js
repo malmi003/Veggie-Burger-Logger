@@ -22,11 +22,10 @@ $(function () {
         );
     });
 
-    $(".submit-btn").on("click", function (event) {
+    $("#submit-btn").on("click", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
-        console.log($("#burger-input").val().trim())
         let newBurger = {
             burger_name: $("#burger-input").val().trim()
         };
@@ -40,7 +39,7 @@ $(function () {
                 console.log("created new burger");
                 // Reload the page to get the updated list
                 // $("#burger-input").html("");
-                // location.reload();
+                location.reload();
             }
         );
     });

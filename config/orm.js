@@ -48,7 +48,7 @@ let orm = {
     },
     // query to insert new item into table
     insertOne: function (table, cols, vals, cb) {
-        let queryString = `INSERT INTO ${table} ${cols.toString()} VALUES (${printQuestionMarks(vals.length)});`
+        let queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (${printQuestionMarks(vals.length)});`
 
         console.log(queryString);
         connection.query(queryString, vals, function (err, result) {
