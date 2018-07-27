@@ -1,9 +1,10 @@
+{{!-- Creating each list item based on true/false value of devour--}}
 <li>
 	{{burger_name}} 
 
 	{{#unless devoured}}
 		<button class="devour" data-id="{{id}}" data-newDevoured="{{devoured}}">
-			DEVOUR DA BURGER
+			DEVOUR
 		</button>
 	{{/unless}}
 </li>

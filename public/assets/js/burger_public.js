@@ -3,8 +3,6 @@ $(function () {
     // on click of devour button
     $(".devour").on("click", function (event) {
         let id = $(this).data("id");
-        // let newDevoured = $(this).data("newDevoured");
-
         let newEatState = {
             devoured: true
         };
@@ -21,7 +19,7 @@ $(function () {
             }
         );
     });
-
+    // on click submit new burger btn
     $("#submit-btn").on("click", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();

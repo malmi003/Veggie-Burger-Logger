@@ -17,6 +17,7 @@ body {
     background: rgba(38, 38, 38, 1);
     color: rgba(255, 255, 255, 1);
 }
+/* ------------HEADER-------------------- */
 h1 {
     color: rgba(255, 51, 15, 1);
     font-size: 2rem;
@@ -25,8 +26,6 @@ h1 {
 img {
     margin-bottom: 2rem;
 }
-
-/* ------------HEADER-------------------- */
 /* ------------FOOTER-------------------- */
 footer {
     position: absolute;
@@ -45,19 +44,24 @@ footer a {
     color: rgba(255, 255, 255, 1);
 }
 /* ------------MAIN-------------------- */
-ul {
+.burger-list {
     display: inline-block;
-    color: rgba(38, 38, 38, .6);
 }
-ul:first-of-type {
-    margin-right: 2rem;
-    color: rgba(38, 38, 38, 1);
+.list-heading {
+    padding: 1rem;
 }
 li {
     background: rgba(255, 255, 255, 1);
     padding: .5rem;
     border-radius: 4px;
     margin: .2rem;
+}
+#not-devoured {
+    margin-right: 2rem;
+    color: rgba(38, 38, 38, 1);
+}
+#devoured {
+    color: rgba(38, 38, 38, .6);
 }
 .devour {
     border: 2px solid rgba(255, 51, 15);

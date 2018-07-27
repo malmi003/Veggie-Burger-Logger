@@ -1,5 +1,6 @@
 let orm = require("../config/orm");
 
+// fill out burger specific info in ORM
 let burger = {
     selectAll: function(cb) {
         orm.selectAll("burgers", function(res) {

@@ -13,7 +13,7 @@ router.get("/", function (req, res) {
         res.render("index", hbsObject);
     });
 });
-// post route to add new items to DB and then return a response that I can then post to the page?
+// post route to add new items to DB
 router.post("/api/burgers/", function (req, res) {
     console.log(req.body.burger_name);
     burger.insertOne(["burger_name"], [req.body.burger_name], function(result) {
@@ -21,7 +21,7 @@ router.post("/api/burgers/", function (req, res) {
     });
 });
 
-// put route to update items in db and send new list of all items to render on page
+// put route to update items in db
 router.put("/api/burgers/:id", function (req, res) {
     let condition = "id = " + req.params.id;
 
@@ -39,6 +39,5 @@ router.put("/api/burgers/:id", function (req, res) {
     });
 });
 
-// Is rendering on page just a matter of refreshing the page?
-
+// export routes to be used in server.js
 module.exports = router;
