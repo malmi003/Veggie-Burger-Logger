@@ -45,13 +45,32 @@ footer a {
     color: rgba(255, 255, 255, 1);
 }
 /* ------------MAIN-------------------- */
-legend {
-    margin: 1rem;
+ul {
+    display: inline-block;
+    color: rgba(38, 38, 38, .6);
 }
-.legend-moved {
-    position: relative; 
-    top: 11em;
-    width: 100%;
+ul:first-of-type {
+    margin-right: 2rem;
+    color: rgba(38, 38, 38, 1);
+}
+li {
+    background: rgba(255, 255, 255, 1);
+    padding: .5rem;
+    border-radius: 4px;
+    margin: .2rem;
+}
+.devour {
+    border: 2px solid rgba(255, 51, 15);
+    color: rgba(255, 51, 15);
+    border-radius: 4px
+}
+.devour:hover {
+    background: rgba(255, 51, 15, 0.3);
+    cursor: pointer;
+}
+legend {
+    margin: 2rem 1rem 1rem;
+    padding-top: 2rem;
 }
 input[type=submit] {
     display: block;
