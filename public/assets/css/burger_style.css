@@ -16,6 +16,7 @@ body {
     font-family: 'Oswald', sans-serif;
     background: rgba(38, 38, 38, 1);
     color: rgba(255, 255, 255, 1);
+    margin-bottom: 70px;
 }
 /* ------------HEADER-------------------- */
 h1 {
@@ -31,6 +32,8 @@ footer {
     position: absolute;
     bottom: 0;
     width: 80%;
+    height: 70px;
+    line-height: 20px;
 }
 footer p {
     margin-bottom: .75rem;
